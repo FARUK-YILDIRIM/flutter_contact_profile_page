@@ -9,32 +9,55 @@ class ContactProfilePage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       //Scaffold for home property
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          leading: Icon(
-            Icons.arrow_back,
-            color: Colors.black,
-          ),
-          actions: [
-            IconButton(
-              icon: Icon(Icons.star_border),
+          appBar: AppBar(
+            backgroundColor: Colors.white,
+            leading: Icon(
+              Icons.arrow_back,
               color: Colors.black,
-              onPressed: () {
-                print("Starred");
-              },
-            )
-          ],
-        ),
-        body: Container(
-          height: 250,
-          width: double.infinity,
-          color: Colors.redAccent,
-          child: Image.network(
-            "https://cdn2.iconfinder.com/data/icons/cute-tech-icon-set-1/1000/Android-512.png",
-            fit: BoxFit.cover,
+            ),
+            actions: [
+              IconButton(
+                icon: Icon(Icons.star_border),
+                color: Colors.black,
+                onPressed: () {
+                  print("Starred");
+                },
+              )
+            ],
           ),
-        ),
-      ),
+          body: ListView(
+            children: [
+              Container(
+                height: 250,
+                width: double.infinity,
+                color: Colors.redAccent,
+                child: Image.network(
+                  "https://cdn2.iconfinder.com/data/icons/cute-tech-icon-set-1/1000/Android-512.png",
+                  fit: BoxFit.cover,
+                ),
+              ),
+              //Adding Display Name
+              Container(
+                height: 60,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start, //maybe center
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        "Display Name",
+                        textDirection: TextDirection.ltr,
+                        style: TextStyle(fontSize: 30),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Divider(
+                color: Colors.grey,
+              )
+            ],
+          )),
     );
   }
 }
