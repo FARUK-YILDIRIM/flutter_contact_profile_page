@@ -8,7 +8,11 @@ class ContactProfilePage extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       //Scaffold for home property
-      home: Scaffold(),
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+        ),
+      ),
     );
   }
 }
