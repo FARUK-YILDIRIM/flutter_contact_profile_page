@@ -25,6 +25,9 @@ class ContactProfilePage extends StatelessWidget {
             )
           ],
         ),
+        body: Container(
+          color: Colors.redAccent,
+        ),
       ),
     );
   }
