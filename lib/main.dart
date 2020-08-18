@@ -26,7 +26,13 @@ class ContactProfilePage extends StatelessWidget {
           ],
         ),
         body: Container(
+          height: 250,
+          width: double.infinity,
           color: Colors.redAccent,
+          child: Image.network(
+            "https://cdn2.iconfinder.com/data/icons/cute-tech-icon-set-1/1000/Android-512.png",
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );
