@@ -14,19 +14,7 @@ class ContactProfilePage extends StatelessWidget {
               iconTheme: IconThemeData(color: Colors.indigo.shade800)),
           iconTheme: IconThemeData(color: Colors.indigo.shade800)),
       home: Scaffold(
-          appBar: AppBar(
-            leading: Icon(
-              Icons.arrow_back,
-            ),
-            actions: [
-              IconButton(
-                icon: Icon(Icons.star_border),
-                onPressed: () {
-                  print("Starred");
-                },
-              )
-            ],
-          ),
+          appBar: buildAppBarWidget(),
           body: ListView(
             children: [
               Container(
@@ -92,6 +80,23 @@ class ContactProfilePage extends StatelessWidget {
           )),
     );
   }
+}
+
+//AppBar Widget
+Widget buildAppBarWidget() {
+  return AppBar(
+    leading: Icon(
+      Icons.arrow_back,
+    ),
+    actions: [
+      IconButton(
+        icon: Icon(Icons.star_border),
+        onPressed: () {
+          print("Starred");
+        },
+      )
+    ],
+  );
 }
 
 //Adding "Call" action item
