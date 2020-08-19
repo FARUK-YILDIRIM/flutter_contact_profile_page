@@ -75,6 +75,9 @@ class ContactProfilePage extends StatelessWidget {
                   ],
                 ),
               ),
+              Divider(color: Colors.grey),
+              //Mobile phone number
+              mobilePhoneListTile(),
             ],
           )),
     );
@@ -158,5 +161,19 @@ Widget buildDirectionsButton() {
       ),
       Text("Directions"),
     ],
+  );
+}
+
+//Adding "Mobile phone number" item
+Widget mobilePhoneListTile() {
+  return ListTile(
+    leading: Icon(Icons.call),
+    title: Text("+90 5xx xxx xx xx"),
+    subtitle: Text("mobile"),
+    trailing: IconButton(
+      icon: Icon(Icons.message),
+      color: Colors.indigo.shade500,
+      onPressed: () {},
+    ),
   );
 }
