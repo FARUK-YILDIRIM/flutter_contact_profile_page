@@ -60,7 +60,7 @@ class ContactProfilePage extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(top: 8, bottom: 8),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     //"Call" action item
                     buildCallButton(),
