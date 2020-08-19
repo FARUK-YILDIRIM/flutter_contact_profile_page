@@ -5,11 +5,17 @@ void main() => runApp(ContactProfilePage());
 class AppThemes {
   static ThemeData appThemeLight() {
     return ThemeData(
-        brightness: Brightness.light,
-        appBarTheme: AppBarTheme(
-            color: Colors.white,
-            iconTheme: IconThemeData(color: Colors.indigo.shade800)),
-        iconTheme: IconThemeData(color: Colors.indigo.shade800));
+      brightness: Brightness.light,
+      appBarTheme: AppBarTheme(
+        color: Colors.white,
+        iconTheme: IconThemeData(
+          color: Colors.indigo.shade800,
+        ),
+      ),
+      iconTheme: IconThemeData(
+        color: Colors.indigo.shade800,
+      ),
+    );
   }
 
   static ThemeData appThemeDark() {
@@ -33,7 +39,7 @@ class ContactProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: AppThemes.appThemeDark(),
+      theme: AppThemes.appThemeLight(),
       home: Scaffold(appBar: buildAppBarWidget(), body: buildBodyWidget()),
     );
   }
