@@ -2,17 +2,23 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(ContactProfilePage());
 
+class AppThemes {
+  static ThemeData appThemeLight() {
+    return ThemeData(
+        brightness: Brightness.light,
+        appBarTheme: AppBarTheme(
+            color: Colors.white,
+            iconTheme: IconThemeData(color: Colors.indigo.shade800)),
+        iconTheme: IconThemeData(color: Colors.indigo.shade800));
+  }
+}
+
 class ContactProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-          brightness: Brightness.light,
-          appBarTheme: AppBarTheme(
-              color: Colors.white,
-              iconTheme: IconThemeData(color: Colors.indigo.shade800)),
-          iconTheme: IconThemeData(color: Colors.indigo.shade800)),
+      theme: AppThemes.appThemeLight(),
       home: Scaffold(appBar: buildAppBarWidget(), body: buildBodyWidget()),
     );
   }
