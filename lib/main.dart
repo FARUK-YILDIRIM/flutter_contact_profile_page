@@ -13,73 +13,76 @@ class ContactProfilePage extends StatelessWidget {
               color: Colors.white,
               iconTheme: IconThemeData(color: Colors.indigo.shade800)),
           iconTheme: IconThemeData(color: Colors.indigo.shade800)),
-      home: Scaffold(
-          appBar: buildAppBarWidget(),
-          body: ListView(
-            children: [
-              Container(
-                height: 250,
-                width: double.infinity,
-                color: Colors.redAccent,
-                child: Image.network(
-                  "https://cdn2.iconfinder.com/data/icons/cute-tech-icon-set-1/1000/Android-512.png",
-                  fit: BoxFit.cover,
-                ),
-              ),
-              //Adding Display Name
-              Container(
-                height: 60,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start, //maybe center
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text(
-                        "Display Name",
-                        textDirection: TextDirection.ltr,
-                        style: TextStyle(fontSize: 30),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Divider(
-                color: Colors.grey,
-              ),
-              //Container for action items
-              Container(
-                margin: EdgeInsets.only(top: 8, bottom: 8),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    //"Call" action item
-                    buildCallButton(),
-                    //"Text" action item
-                    buildTextButton(),
-                    //"Video" action item
-                    buildVideoCallButton(),
-                    //"Email" action item
-                    buildEmailButton(),
-                    //"Directions" action item
-                    buildDirectionsButton(),
-                  ],
-                ),
-              ),
-              Divider(color: Colors.grey),
-              //Mobile phone number
-              mobilePhoneListTile(),
-              //Other phone number"
-              otherPhoneListTile(),
-              Divider(color: Colors.grey),
-              //Email
-              emailListTile(),
-              Divider(color: Colors.grey),
-              //Adress
-              addressListTile(),
-            ],
-          )),
+      home: Scaffold(appBar: buildAppBarWidget(), body: buildBodyWidget()),
     );
   }
+}
+
+//Body Widget
+Widget buildBodyWidget() {
+  return ListView(
+    children: [
+      Container(
+        height: 250,
+        width: double.infinity,
+        color: Colors.redAccent,
+        child: Image.network(
+          "https://cdn2.iconfinder.com/data/icons/cute-tech-icon-set-1/1000/Android-512.png",
+          fit: BoxFit.cover,
+        ),
+      ),
+      //Adding Display Name
+      Container(
+        height: 60,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start, //maybe center
+          children: [
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                "Display Name",
+                textDirection: TextDirection.ltr,
+                style: TextStyle(fontSize: 30),
+              ),
+            )
+          ],
+        ),
+      ),
+      Divider(
+        color: Colors.grey,
+      ),
+      //Container for action items
+      Container(
+        margin: EdgeInsets.only(top: 8, bottom: 8),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            //"Call" action item
+            buildCallButton(),
+            //"Text" action item
+            buildTextButton(),
+            //"Video" action item
+            buildVideoCallButton(),
+            //"Email" action item
+            buildEmailButton(),
+            //"Directions" action item
+            buildDirectionsButton(),
+          ],
+        ),
+      ),
+      Divider(color: Colors.grey),
+      //Mobile phone number
+      mobilePhoneListTile(),
+      //Other phone number"
+      otherPhoneListTile(),
+      Divider(color: Colors.grey),
+      //Email
+      emailListTile(),
+      Divider(color: Colors.grey),
+      //Adress
+      addressListTile(),
+    ],
+  );
 }
 
 //AppBar Widget
