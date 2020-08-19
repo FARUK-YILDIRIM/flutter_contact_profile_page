@@ -1,21 +1,29 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(ContactProfilePage());
+enum APP_THEME { LIGHT, DARK }
 
 class AppThemes {
   static ThemeData appThemeLight() {
     return ThemeData(
-      brightness: Brightness.light,
-      appBarTheme: AppBarTheme(
-        color: Colors.white,
+        brightness: Brightness.light,
+        appBarTheme: AppBarTheme(
+          color: Colors.white,
+          iconTheme: IconThemeData(
+            color: Colors.indigo.shade800,
+          ),
+        ),
         iconTheme: IconThemeData(
           color: Colors.indigo.shade800,
         ),
-      ),
-      iconTheme: IconThemeData(
-        color: Colors.indigo.shade800,
-      ),
-    );
+        //Theme for FAB
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          //White background
+          backgroundColor: Colors.white,
+
+          //Black plus (+) sign for FAB
+          foregroundColor: Colors.black,
+        ));
   }
 
   static ThemeData appThemeDark() {
@@ -30,6 +38,14 @@ class AppThemes {
       iconTheme: IconThemeData(
         color: Colors.orange,
       ),
+      //Theme for FAB
+      floatingActionButtonTheme: FloatingActionButtonThemeData(
+        //dark background for FAB
+        backgroundColor: Colors.black,
+
+        //White plus (+) sign for FAB
+        foregroundColor: Colors.white,
+      ),
     );
   }
 }
@@ -40,12 +56,31 @@ class ContactProfilePage extends StatefulWidget {
 }
 
 class _ContactProfilePageState extends State<ContactProfilePage> {
+  var currentTheme = APP_THEME.LIGHT;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: AppThemes.appThemeLight(),
-      home: Scaffold(appBar: buildAppBarWidget(), body: buildBodyWidget()),
+      theme: currentTheme == APP_THEME.DARK
+          ? AppThemes.appThemeDark()
+          : AppThemes.appThemeLight(),
+      home: Scaffold(
+        appBar: buildAppBarWidget(), body: buildBodyWidget(),
+        //FAB
+        floatingActionButton: FloatingActionButton(
+          child: IconButton(
+            icon: Icon(Icons.wb_sunny),
+            onPressed: () {
+              setState(() {
+                currentTheme == APP_THEME.DARK
+                    ? currentTheme = APP_THEME.LIGHT
+                    : currentTheme = APP_THEME.DARK;
+              });
+            },
+          ),
+          mini: true,
+        ),
+      ),
     );
   }
 }
