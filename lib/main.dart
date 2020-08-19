@@ -11,6 +11,21 @@ class AppThemes {
             iconTheme: IconThemeData(color: Colors.indigo.shade800)),
         iconTheme: IconThemeData(color: Colors.indigo.shade800));
   }
+
+  static ThemeData appThemeDark() {
+    return ThemeData(
+      brightness: Brightness.dark,
+      appBarTheme: AppBarTheme(
+        color: Colors.black,
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
+      ),
+      iconTheme: IconThemeData(
+        color: Colors.orange,
+      ),
+    );
+  }
 }
 
 class ContactProfilePage extends StatelessWidget {
@@ -18,7 +33,7 @@ class ContactProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: AppThemes.appThemeLight(),
+      theme: AppThemes.appThemeDark(),
       home: Scaffold(appBar: buildAppBarWidget(), body: buildBodyWidget()),
     );
   }
