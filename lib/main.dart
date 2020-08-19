@@ -34,7 +34,12 @@ class AppThemes {
   }
 }
 
-class ContactProfilePage extends StatelessWidget {
+class ContactProfilePage extends StatefulWidget {
+  @override
+  _ContactProfilePageState createState() => _ContactProfilePageState();
+}
+
+class _ContactProfilePageState extends State<ContactProfilePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
