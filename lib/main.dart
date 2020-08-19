@@ -83,6 +83,9 @@ class ContactProfilePage extends StatelessWidget {
               Divider(color: Colors.grey),
               //Email
               emailListTile(),
+              Divider(color: Colors.grey),
+              //Adress
+              addressListTile(),
             ],
           )),
     );
@@ -203,5 +206,19 @@ Widget emailListTile() {
     leading: Icon(Icons.email),
     title: Text("info@softalika.com"),
     subtitle: Text("work"),
+  );
+}
+
+//Adding "Adress" item
+Widget addressListTile() {
+  return ListTile(
+    leading: Icon(Icons.location_on),
+    title: Text("Ankara, Türkiye"),
+    subtitle: Text("home"),
+    trailing: IconButton(
+      icon: Icon(Icons.directions),
+      color: Colors.indigo.shade500,
+      onPressed: () {},
+    ),
   );
 }
