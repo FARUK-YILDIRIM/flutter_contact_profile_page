@@ -81,6 +81,8 @@ class ContactProfilePage extends StatelessWidget {
               //Other phone number"
               otherPhoneListTile(),
               Divider(color: Colors.grey),
+              //Email
+              emailListTile(),
             ],
           )),
     );
@@ -192,5 +194,14 @@ Widget otherPhoneListTile() {
       color: Colors.indigo.shade500,
       onPressed: () {},
     ),
+  );
+}
+
+//Adding "Email" item
+Widget emailListTile() {
+  return ListTile(
+    leading: Icon(Icons.email),
+    title: Text("info@softalika.com"),
+    subtitle: Text("work"),
   );
 }
