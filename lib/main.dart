@@ -54,21 +54,7 @@ Widget buildBodyWidget() {
       //Container for action items
       Container(
         margin: EdgeInsets.only(top: 8, bottom: 8),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            //"Call" action item
-            buildCallButton(),
-            //"Text" action item
-            buildTextButton(),
-            //"Video" action item
-            buildVideoCallButton(),
-            //"Email" action item
-            buildEmailButton(),
-            //"Directions" action item
-            buildDirectionsButton(),
-          ],
-        ),
+        child: profileActionsItems(),
       ),
       Divider(color: Colors.grey),
       //Mobile phone number
@@ -81,6 +67,25 @@ Widget buildBodyWidget() {
       Divider(color: Colors.grey),
       //Adress
       addressListTile(),
+    ],
+  );
+}
+
+//Profile Items
+Widget profileActionsItems() {
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: [
+      //"Call" action item
+      buildCallButton(),
+      //"Text" action item
+      buildTextButton(),
+      //"Video" action item
+      buildVideoCallButton(),
+      //"Email" action item
+      buildEmailButton(),
+      //"Directions" action item
+      buildDirectionsButton(),
     ],
   );
 }
