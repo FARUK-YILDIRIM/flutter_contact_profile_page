@@ -7,7 +7,9 @@ class ContactProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      //Scaffold for home property
+      theme: ThemeData(
+        brightness: Brightness.light,
+      ),
       home: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.white,
