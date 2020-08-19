@@ -68,6 +68,8 @@ class ContactProfilePage extends StatelessWidget {
                     buildTextButton(),
                     //"Video" action item
                     buildVideoCallButton(),
+                    //"Email" action item
+                    buildEmailButton(),
                   ],
                 ),
               ),
@@ -121,6 +123,22 @@ Widget buildVideoCallButton() {
         onPressed: () {},
       ),
       Text("Video"),
+    ],
+  );
+}
+
+//Adding "Email" action item
+Widget buildEmailButton() {
+  return Column(
+    children: [
+      IconButton(
+        icon: Icon(
+          Icons.email,
+          color: Colors.indigo.shade800,
+        ),
+        onPressed: () {},
+      ),
+      Text("Email"),
     ],
   );
 }
