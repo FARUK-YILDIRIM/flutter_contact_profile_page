@@ -78,6 +78,9 @@ class ContactProfilePage extends StatelessWidget {
               Divider(color: Colors.grey),
               //Mobile phone number
               mobilePhoneListTile(),
+              //Other phone number"
+              otherPhoneListTile(),
+              Divider(color: Colors.grey),
             ],
           )),
     );
@@ -167,9 +170,23 @@ Widget buildDirectionsButton() {
 //Adding "Mobile phone number" item
 Widget mobilePhoneListTile() {
   return ListTile(
-    leading: Icon(Icons.call),
+    leading: Icon(Icons.phone_android),
     title: Text("+90 5xx xxx xx xx"),
     subtitle: Text("mobile"),
+    trailing: IconButton(
+      icon: Icon(Icons.message),
+      color: Colors.indigo.shade500,
+      onPressed: () {},
+    ),
+  );
+}
+
+//Adding "Other phone number" item
+Widget otherPhoneListTile() {
+  return ListTile(
+    leading: Icon(Icons.call),
+    title: Text("xxx-xxx-xxxx"),
+    subtitle: Text("other"),
     trailing: IconButton(
       icon: Icon(Icons.message),
       color: Colors.indigo.shade500,
