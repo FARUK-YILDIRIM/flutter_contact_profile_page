@@ -8,11 +8,11 @@ class ContactProfilePage extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        brightness: Brightness.light,
-        appBarTheme: AppBarTheme(
-            color: Colors.white,
-            iconTheme: IconThemeData(color: Colors.indigo.shade800)),
-      ),
+          brightness: Brightness.light,
+          appBarTheme: AppBarTheme(
+              color: Colors.white,
+              iconTheme: IconThemeData(color: Colors.indigo.shade800)),
+          iconTheme: IconThemeData(color: Colors.indigo.shade800)),
       home: Scaffold(
           appBar: AppBar(
             leading: Icon(
@@ -101,7 +101,6 @@ Widget buildCallButton() {
       IconButton(
         icon: Icon(
           Icons.call,
-          color: Colors.indigo.shade800,
         ),
         onPressed: () {},
       ),
@@ -117,7 +116,6 @@ Widget buildTextButton() {
       IconButton(
         icon: Icon(
           Icons.message,
-          color: Colors.indigo.shade800,
         ),
         onPressed: () {},
       ),
@@ -133,7 +131,6 @@ Widget buildVideoCallButton() {
       IconButton(
         icon: Icon(
           Icons.video_call,
-          color: Colors.indigo.shade800,
         ),
         onPressed: () {},
       ),
@@ -149,7 +146,6 @@ Widget buildEmailButton() {
       IconButton(
         icon: Icon(
           Icons.email,
-          color: Colors.indigo.shade800,
         ),
         onPressed: () {},
       ),
@@ -165,7 +161,6 @@ Widget buildDirectionsButton() {
       IconButton(
         icon: Icon(
           Icons.directions,
-          color: Colors.indigo.shade800,
         ),
         onPressed: () {},
       ),
@@ -182,7 +177,6 @@ Widget mobilePhoneListTile() {
     subtitle: Text("mobile"),
     trailing: IconButton(
       icon: Icon(Icons.message),
-      color: Colors.indigo.shade500,
       onPressed: () {},
     ),
   );
@@ -196,7 +190,6 @@ Widget otherPhoneListTile() {
     subtitle: Text("other"),
     trailing: IconButton(
       icon: Icon(Icons.message),
-      color: Colors.indigo.shade500,
       onPressed: () {},
     ),
   );
@@ -219,7 +212,6 @@ Widget addressListTile() {
     subtitle: Text("home"),
     trailing: IconButton(
       icon: Icon(Icons.directions),
-      color: Colors.indigo.shade500,
       onPressed: () {},
     ),
   );
