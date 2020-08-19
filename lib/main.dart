@@ -63,7 +63,9 @@ class ContactProfilePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     //"Call" action item
-                    buildCallButton()
+                    buildCallButton(),
+                    //"Text" action item
+                    buildTextButton(),
                   ],
                 ),
               ),
@@ -76,7 +78,7 @@ class ContactProfilePage extends StatelessWidget {
 //Adding "Call" action item
 Widget buildCallButton() {
   return Column(
-    children: <Widget>[
+    children: [
       IconButton(
         icon: Icon(
           Icons.call,
@@ -85,6 +87,22 @@ Widget buildCallButton() {
         onPressed: () {},
       ),
       Text("Call"),
+    ],
+  );
+}
+
+//Adding "Text" action item
+Widget buildTextButton() {
+  return Column(
+    children: [
+      IconButton(
+        icon: Icon(
+          Icons.message,
+          color: Colors.indigo.shade800,
+        ),
+        onPressed: () {},
+      ),
+      Text("Text"),
     ],
   );
 }
