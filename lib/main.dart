@@ -56,7 +56,7 @@ class ContactProfilePage extends StatefulWidget {
 }
 
 class _ContactProfilePageState extends State<ContactProfilePage> {
-  var currentTheme = APP_THEME.LIGHT;
+  var currentTheme = APP_THEME.DARK;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -92,9 +92,8 @@ Widget buildBodyWidget() {
       Container(
         height: 250,
         width: double.infinity,
-        color: Colors.redAccent,
         child: Image.network(
-          "https://cdn2.iconfinder.com/data/icons/cute-tech-icon-set-1/1000/Android-512.png",
+          "https://m.media-amazon.com/images/M/MV5BMTk2MDc1MDExN15BMl5BanBnXkFtZTgwMzU3MDMyMjE@._V1_.jpg",
           fit: BoxFit.cover,
         ),
       ),
@@ -107,7 +106,7 @@ Widget buildBodyWidget() {
             Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(
-                "Display Name",
+                "Barney Stinson",
                 textDirection: TextDirection.ltr,
                 style: TextStyle(fontSize: 30),
               ),
@@ -253,7 +252,7 @@ Widget buildDirectionsButton() {
 Widget mobilePhoneListTile() {
   return ListTile(
     leading: Icon(Icons.phone_android),
-    title: Text("+90 5xx xxx xx xx"),
+    title: Text("1-877-987-6401"),
     subtitle: Text("mobile"),
     trailing: IconButton(
       icon: Icon(Icons.message),
@@ -288,8 +287,8 @@ Widget emailListTile() {
 Widget addressListTile() {
   return ListTile(
     leading: Icon(Icons.location_on),
-    title: Text("Ankara, Türkiye"),
-    subtitle: Text("home"),
+    title: Text("240 West 55th Street, NY"),
+    subtitle: Text("MacLaren's Pub"),
     trailing: IconButton(
       icon: Icon(Icons.directions),
       onPressed: () {},
