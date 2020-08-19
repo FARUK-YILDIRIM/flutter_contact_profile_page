@@ -9,18 +9,18 @@ class ContactProfilePage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.light,
+        appBarTheme: AppBarTheme(
+            color: Colors.white,
+            iconTheme: IconThemeData(color: Colors.indigo.shade800)),
       ),
       home: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.white,
             leading: Icon(
               Icons.arrow_back,
-              color: Colors.black,
             ),
             actions: [
               IconButton(
                 icon: Icon(Icons.star_border),
-                color: Colors.black,
                 onPressed: () {
                   print("Starred");
                 },
