@@ -55,9 +55,36 @@ class ContactProfilePage extends StatelessWidget {
               ),
               Divider(
                 color: Colors.grey,
-              )
+              ),
+              //Container for action items
+              Container(
+                margin: EdgeInsets.only(top: 8, bottom: 8),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    //"Call" action item
+                    buildCallButton()
+                  ],
+                ),
+              ),
             ],
           )),
     );
   }
+}
+
+//Adding "Call" action item
+Widget buildCallButton() {
+  return Column(
+    children: <Widget>[
+      IconButton(
+        icon: Icon(
+          Icons.call,
+          color: Colors.indigo.shade800,
+        ),
+        onPressed: () {},
+      ),
+      Text("Call"),
+    ],
+  );
 }
