@@ -66,6 +66,8 @@ class ContactProfilePage extends StatelessWidget {
                     buildCallButton(),
                     //"Text" action item
                     buildTextButton(),
+                    //"Video" action item
+                    buildVideoCallButton(),
                   ],
                 ),
               ),
@@ -103,6 +105,22 @@ Widget buildTextButton() {
         onPressed: () {},
       ),
       Text("Text"),
+    ],
+  );
+}
+
+//Adding "Video" action item
+Widget buildVideoCallButton() {
+  return Column(
+    children: [
+      IconButton(
+        icon: Icon(
+          Icons.video_call,
+          color: Colors.indigo.shade800,
+        ),
+        onPressed: () {},
+      ),
+      Text("Video"),
     ],
   );
 }
